@@ -1,0 +1,62 @@
+body {
+    background-color: burlywood;
+    margin: 0;
+}
+
+th,
+td,
+table,
+tr {
+    border: 1px solid black;
+}
+
+table {
+    height: 100vh;
+    width: 100vw;
+    border-collapse: collapse;
+}
+
+th {
+    font-size: 40px;
+}
+
+td {
+    font-size: 30px;
+    height: 25%;
+    width: 33.33%;
+    text-align: center;
+}
+
+button {
+    font-size: 20px;
+    height: 70%;
+    width: 70%;
+}
+
+.col1 {
+    background-color: lightslategray;
+}
+
+.col2 {
+    background-color: antiquewhite;
+}
+
+.col3 {
+    background-color: lightgray;
+}
+
+#rock {
+    background-color: gray;
+}
+
+#paper {
+    background-color: white;
+}
+
+#scissors {
+    background-color: silver;
+}
+
+#submit {
+    background-color: green;
+}
