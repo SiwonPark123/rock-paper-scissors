@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <title>Rock Paper Scissors</title>
     <link rel="styleSheet" type="text/css" href="game.css">
+    <script src="game.js"></script>
 </head>
 
 <body>
@@ -19,27 +20,29 @@
         </tr>
         <tr>
             <td class="col1" colspan="2">
-                <button id="rock">Rock</button>
+                <button id="rock" onclick="selectPlayerChoice(this.id)">Rock</button>
             </td>
             <td class="col2" colspan="2">
-                <button id="paper">Paper</button>
+                <button id="paper" onclick="selectPlayerChoice(this.id)">Paper</button>
             </td>
             <td class="col3" colspan="2">
-                <button id="scissors">Scissors</button>
+                <button id="scissors" onclick="selectPlayerChoice(this.id)">Scissors</button>
             </td>
         </tr>
         <tr>
             <td class="col1" colspan="2"></td>
             <td class="col2" colspan="2">
-                <button id="submit">Submit</button>
+                <button id="submit" onclick="determineBotChoice(); determineWinner(); displayResult()">Submit</button>
             </td>
             <td class="col3" colspan="2"></td>
         </tr>
         <tr>
-            <td colspan="2"></td>
+            <td>Player Score: </td>
+            <td id="playerScore">0</td>
             <td>Result: </td>
             <td id="result"></td>
-            <td colspan="2"></td>
+            <td>Bot Score: </td>
+            <td id="botScore">0</td>
         </tr>
     </table>
 </body>
