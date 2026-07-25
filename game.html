@@ -20,21 +20,23 @@
         </tr>
         <tr>
             <td class="col1" colspan="2">
-                <button id="rock" onclick="selectPlayerChoice(this.id)">Rock</button>
+                <button id="Rock" onclick="selectPlayerChoice(this.id)">Rock</button>
             </td>
             <td class="col2" colspan="2">
-                <button id="paper" onclick="selectPlayerChoice(this.id)">Paper</button>
+                <button id="Paper" onclick="selectPlayerChoice(this.id)">Paper</button>
             </td>
             <td class="col3" colspan="2">
-                <button id="scissors" onclick="selectPlayerChoice(this.id)">Scissors</button>
+                <button id="Scissors" onclick="selectPlayerChoice(this.id)">Scissors</button>
             </td>
         </tr>
         <tr>
-            <td class="col1" colspan="2"></td>
+            <td class="col1">Player: </td>
+            <td class="col1" id="playerChoice"></td>
             <td class="col2" colspan="2">
                 <button id="submit" onclick="determineBotChoice(); determineWinner(); displayResult()">Submit</button>
             </td>
-            <td class="col3" colspan="2"></td>
+            <td class="col3">Bot: </td>
+            <td class="col3" id="botChoice"></td>
         </tr>
         <tr>
             <td>Player Score: </td>

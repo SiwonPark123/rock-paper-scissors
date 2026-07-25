@@ -1,5 +1,5 @@
 var playerChoice = "";
-var botPossibleChoices = ["rock", "paper", "scissors"];
+var botPossibleChoices = ["Rock", "Paper", "Scissors"];
 var botChoiceIndex = 0;
 var botChoice = "";
 var result = "";
@@ -8,34 +8,30 @@ var botScore = 0;
 
 function selectPlayerChoice(choice) {
     playerChoice = choice;
-    console.log(playerChoice);
+    document.getElementById("playerChoice").textContent = playerChoice;
 }
 
 function determineBotChoice() {
-    botChoiceIndex = Math.floor(Math.random() * botPossibleChoices.length)
+    botChoiceIndex = Math.floor(Math.random() * botPossibleChoices.length);
     botChoice = botPossibleChoices[botChoiceIndex];
-    console.log(botChoice);
+    document.getElementById("botChoice").textContent = botChoice;
 }
 
 function determineWinner() {
-    if (playerChoice == "rock" && botChoice == "scissors") {
+    if (playerChoice == "Rock" && botChoice == "Scissors") {
         result = "player";
-    } else if (playerChoice == "rock" && botChoice == "rock") {
-        result = "tie";
-    } else if (playerChoice == "rock" && botChoice == "paper") {
+    } else if (playerChoice == "Rock" && botChoice == "Paper") {
         result = "bot";
-    } else if (playerChoice == "paper" && botChoice == "rock") {
+    } else if (playerChoice == "Paper" && botChoice == "Rock") {
         result = "player";
-    } else if (playerChoice == "paper" && botChoice == "paper") {
-        result = "tie";
-    } else if (playerChoice == "paper" && botChoice == "scissors") {
+    } else if (playerChoice == "Paper" && botChoice == "Scissors") {
         result = "bot";
-    } else if (playerChoice == "scissors" && botChoice == "paper") {
+    } else if (playerChoice == "Scissors" && botChoice == "Paper") {
         result = "player";
-    } else if (playerChoice == "scissors" && botChoice == "scissors") {
-        result = "tie";
-    } else if (playerChoice == "scissors" && botChoice == "rock") {
+    } else if (playerChoice == "Scissors" && botChoice == "Rock") {
         result = "bot";
+    } else if (playerChoice == botChoice) {
+        result = "tie";
     }
 }
 
